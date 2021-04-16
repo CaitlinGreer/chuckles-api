@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS chuckles_jokes;
