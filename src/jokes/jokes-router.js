@@ -6,7 +6,7 @@ const JokesService = require('./jokes-service')
 const jokesRouter = express.Router()
 const jsonParser = express.json()
 
-const serializejoke = joke => ({
+const serializeJoke = joke => ({
     id: joke.id,
     joke: xss(joke.joke),
     punchline: xss(joke.punchline),
@@ -75,7 +75,7 @@ jokesRouter
         .delete((req, res, next) => {
             JokesService.deleteJoke(
                 req.app.get('db'),
-                req.params.joke_id
+                req.params.id
             )
             .then(() => {
                 res.status(204).end()
