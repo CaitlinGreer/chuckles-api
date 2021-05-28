@@ -20,7 +20,7 @@ app.use(cors())
 app.use('/api/jokes', jokesRouter)
 
 app.get('/', (req, res) => {
-    res.send('Hello, world!')
+    res.send('Hello, world! Chuckles')
 })
 
 //Error handler middleware (hide error messages from users)
